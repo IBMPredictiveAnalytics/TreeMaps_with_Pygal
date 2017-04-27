@@ -1,17 +1,19 @@
+# encoding=utf-8
 import pandas as pd
 import pygal
 import sys
 import os
+import webbrowser
 
 if len(sys.argv) > 1 and sys.argv[1] == "-test":
     df = pd.read_csv("~/Datasets/DRUG1N.csv")
     cat_field = "Drug"
     value_field = ""
     output_option = 'output_to_screen'
-    output_path = ''
+    output_path = '/Users/McCarroll/test/test.svg'
     output_width = 256
     output_height = 256
-    viewer_command = "firefox"
+    viewer_command = ""
     title = "Test"
 else:
     from pyspark.context import SparkContext
@@ -59,8 +61,11 @@ else:
 treemap.render_to_file(output_path)
 
 if output_option == 'output_to_screen':
-    os.system(viewer_command+" "+output_path)
-    print("Output should open in a browser window")
+    if viewer_command:
+        os.system(viewer_command+" "+output_path)
+    else:
+        webbrowser.open("file://"+output_path)
+    print("Output should now open in a browser window")
 else:
     print("Output should be saved on the server to path: "+output_path)
 

@@ -31,13 +31,7 @@ If using v18.0 of SPSS Modeler, navigate to the options.cfg file (Windows defaul
 
 Your Python installation must [have the Pygal library installed](http://www.pygal.org/en/stable/installing.html) for this extension to work
 
-#### Extension Hub Installation
-  1. Go to the Extension menu in Modeler and click "Extension Hub"
-  2.	In the search bar, type the name of this extension and press enter
-  3. Check the box next to "Get extension" and click OK at the bottom of the screen
-  4. The extension will install and a pop-up will show what palette it was installed to
-
-#### Manual Installation
+#### Modeler Extension Installation
   1.	[Save the .mpe file][3] to your computer
   2.	In Modeler, click the Extensions menu, then click Install Local Extension Bundle
   3.	Navigate to where the .mpe was saved and click open
@@ -48,6 +42,7 @@ Example
 ----
 
 [Download the example stream][5]
+
 [Download the example data][6]
 
 ---
